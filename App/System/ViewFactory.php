@@ -5,22 +5,7 @@ namespace Src\System;
 
 class ViewFactory
 {
-    /**
-     * Application Object
-     *
-     * @var \System\Application
-     */
-    private $app;
 
-    /**
-     * Constructor
-     *
-     * @param \System\Application $app
-     */
-    public function __construct($app)
-    {
-        $this->app = $app;
-    }
 
     /**
      * Render the given view path with the passed variables and generate new View Object for it
@@ -29,7 +14,7 @@ class ViewFactory
      * @param array $data
      * @return \System\View\ViewInterface
      */
-    public function render($viewPath, array $data = [])
+    public function render(string $viewPath, array $data = []): View
     {
         return new View($viewPath, $data);
     }

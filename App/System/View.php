@@ -56,7 +56,7 @@ class View implements ViewInterface
      */
     private function preparePath($viewPath)
     {
-        $path = 'src/Views/' . $viewPath . '.view.php';
+        $path = 'App/Views/' . $viewPath . '.view.php';
 
         $this->viewPath = $path;
 
